@@ -1,6 +1,5 @@
 export function fetchEvents(baseKey, table, { noOfRecords, tableView }) {
   const apiKey = process.env.REACT_APP_AIRTABLE_TEST;
-  console.log(process.env);
   return fetch(
     `https://api.airtable.com/v0/${baseKey}/${table}?maxRecords=${noOfRecords}&view=${encodeURI(
       tableView
