@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { fetchEvents } from './data/api/events';
+import EventListContainer from './containers/EventListContainer';
 function App() {
+  const [events, setEvents] = React.useState([]);
+
+  React.useEffect(() => {
+    let isMounted = true;
+    if (isMounted) {
+      fetchEvents('apppUWSIpwCI9AEqJ', 'Schedule', {
+        noOfRecords: 25,
+        tableView: 'Full schedule',
+      })
+        .then((fetchedEvents) => {
+          setEvents(fetchedEvents);
+        })
+        .catch((error) => {
+          console.error('From fetchEvents in App.js:', error);
+        });
+    }
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div role='feed' aria-label='event list container' className='m-4'>
+      <EventListContainer events={events} />
     </div>
   );
 }
