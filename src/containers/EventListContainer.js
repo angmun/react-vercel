@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 
 import Event from '../components/Event';
+import EventMap from '../components/EventMap';
 
 export default class EventListContainer extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class EventListContainer extends Component {
         role='region'
         aria-label='List of events'
         className='overflow-hidden rounded-md p-6'>
+        <EventMap />
         {this.props.events.map((event) => {
           const {
             fields: { Activity, Start, End, Type },

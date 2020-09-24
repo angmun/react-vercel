@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 export default class Event extends Component {
   render() {
     return (
-      <section
-        aria-label='an event listing'
-        className='bg-gray-100 rounded-md p-3 mt-6 mb-8 shadow-lg font-sans'>
+      <section aria-label='an event listing' className='shadow-card'>
         <h2 className='text-teal-900 font-semibold text-2xl pt-2'>
           {this.props.eventTitle}
         </h2>
