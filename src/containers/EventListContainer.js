@@ -18,6 +18,7 @@ export default class EventListContainer extends Component {
         {this.props.events.map((event) => {
           const {
             fields: { Activity, Start, End, Type },
+            id,
           } = event;
           const dateObject = dayjs(Start);
           const date = dateObject.format('MMMM D, YYYY');
@@ -25,6 +26,7 @@ export default class EventListContainer extends Component {
           const end = dayjs(End).format('h:mm A');
           return (
             <Event
+              eventId={id}
               eventTitle={Activity || 'No event title found'}
               startDate={date || 'TBD'}
               startTime={start || ''}
