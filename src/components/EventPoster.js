@@ -15,7 +15,7 @@ export default function EventPoster(props) {
       </figure>
       <div className='flex flex-row flex-no-wrap'>
         <figure className='event-poster__branding-container'>
-          <img alt='Southside Outside Logo' />
+          <img alt='Some Logo' />
           <figcaption>Some slogan here maybe</figcaption>
         </figure>
         <figure className='event-poster__branding-container'>
