@@ -1,0 +1,29 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@tailwind",
+      "description": "Tailwind directive for adding base, components, utilities and screens styles into your CSS"
+    },
+    {
+      "name": "@apply",
+      "description": "Tailwind directive for adding existing tailwind utility classes into your own custom CSS"
+    },
+    {
+      "name": "@layer",
+      "description": "Tailwind directive for adding custom CSS to a particular set of tailwind rules: base, components or utilities"
+    },
+    {
+      "name": "@variants",
+      "description": "Tailwind directive for generating variants of your own utilities such as responsive, hover, focus and active"
+    },
+    {
+      "name": "@responsive",
+      "description": "Tailwind directive for generting responsive variants of your own CSS classes"
+    },
+    {
+      "name": "@screen",
+      "description": "Tailwind directive for creating media queries that reference your breakpoints by name"
+    }
+  ]
+}

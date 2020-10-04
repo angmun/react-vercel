@@ -9,6 +9,20 @@
   .event-map {
     height: 450px;
   }
+  .event__link {
+    @apply inline-block my-2 text-purple-600;
+  }
+  .event__link:hover {
+    @apply text-gray-600 underline;
+  }
+  .event__link:active {
+    @apply text-purple-900;
+  }
+  .event-details__event-poster {
+    max-width: 8.5in;
+  }
+  .event-poster__branding-container {
+  }
 }
 @screen md {
   .event-map {

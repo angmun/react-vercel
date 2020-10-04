@@ -15,26 +15,28 @@ export default class EventListContainer extends Component {
         aria-label='List of events'
         className='overflow-hidden rounded-md p-6'>
         <EventMap />
-        {this.props.events.map((event) => {
-          const {
-            fields: { Activity, Start, End, Type },
-            id,
-          } = event;
-          const dateObject = dayjs(Start);
-          const date = dateObject.format('MMMM D, YYYY');
-          const start = dateObject.format('h:mm A');
-          const end = dayjs(End).format('h:mm A');
-          return (
-            <Event
-              eventId={id}
-              eventTitle={Activity || 'No event title found'}
-              startDate={date || 'TBD'}
-              startTime={start || ''}
-              endTime={end || ''}
-              eventType={`This is a "${Type}" event`}
-            />
-          );
-        })}
+        {this.props.events
+          ? this.props.events.map((event) => {
+              const {
+                fields: { Activity, Start, End, Type },
+                id,
+              } = event;
+              const dateObject = dayjs(Start);
+              const date = dateObject.format('MMMM D, YYYY');
+              const start = dateObject.format('h:mm A');
+              const end = dayjs(End).format('h:mm A');
+              return (
+                <Event
+                  eventId={id}
+                  eventTitle={Activity || 'No event title found'}
+                  startDate={date || 'TBD'}
+                  startTime={start || ''}
+                  endTime={end || ''}
+                  eventType={`This is a "${Type}" event`}
+                />
+              );
+            })
+          : null}
       </div>
     );
   }

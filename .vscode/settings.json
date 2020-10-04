@@ -1,4 +1,5 @@
 {
-    "prettier.jsxSingleQuote": true,
-    "eslint.alwaysShowStatus": true
+  "prettier.jsxSingleQuote": true,
+  "eslint.alwaysShowStatus": true,
+  "css.customData": ["./css.tailwind-css.json"]
 }

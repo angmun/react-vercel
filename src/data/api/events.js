@@ -11,7 +11,6 @@ export function fetchEvents(
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       return data.records;
     })
     .catch((error) => console.error('From fetchEvents:', error));
@@ -23,7 +22,7 @@ export function fetchAnEvent(baseKey, table, eventId) {
   )
     .then((response) => response.json())
     .then((data) => {
-      return data.records;
+      return data;
     })
     .catch((error) => console.error('From fetchAnEvent:', error));
 }

@@ -24,9 +24,7 @@ export default class Event extends Component {
           ut in. Ex sint velit fugiat amet ad reprehenderit. Aute esse aute in
           consectetur.
           <br />
-          <Link
-            className='inline-block py-2 text-purple-600'
-            to={`/${this.props.eventId}`}>
+          <Link className='event__link' to={`/event/${this.props.eventId}`}>
             Learn more about this event
           </Link>
         </p>
